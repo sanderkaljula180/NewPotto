@@ -18,3 +18,4 @@ after_success:
   # Push it to Docker Hub
   - docker push sandergit180/potto-client
  # - docker push sandergit180/potto-back
+ # PUSH TO DOCKERHUB
