@@ -17,5 +17,6 @@ spec:
                     image: sandergit180/potto-client
                     ports:
                         - containerPort: 3000
+                        - containerPort: 3001
                     stdin: true
                     tty: true
