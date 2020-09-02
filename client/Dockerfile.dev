@@ -3,10 +3,7 @@ WORKDIR /app
 ENV RAZZLE_CUSTOM_VARIABLE x
 
 # Bundle APP files
-COPY build .
-COPY package.json .
-COPY package-lock.json .
-COPY build/public public
+COPY ./package.json ./
 RUN npm install
-COPY . .
+COPY ./ ./
 CMD ["yarn", "start"]
