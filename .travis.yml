@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t sandergit180/potto-client-test -f ./client/Dockerfile.dev ./
+  - docker build -t sandergit180/potto-client-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true sandergit180/potto-client-test yarn test -- --coverage
