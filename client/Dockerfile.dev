@@ -1,6 +1,12 @@
 FROM node:alpine
 WORKDIR /app
-COPY ./package.json ./
+ENV RAZZLE_CUSTOM_VARIABLE x
+
+# Bundle APP files
+COPY build .
+COPY package.json .
+COPY package-lock.json .
+COPY build/public public
 RUN npm install
 COPY . .
 CMD ["yarn", "start"]

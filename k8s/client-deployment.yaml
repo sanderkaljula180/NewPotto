@@ -14,7 +14,7 @@ spec:
         spec:
             containers:
                 -   name: client
-                    image: uxioandrade/tutorial-client
+                    image: sandergit180/potto-client
                     ports:
                         - containerPort: 3000
                     stdin: true
