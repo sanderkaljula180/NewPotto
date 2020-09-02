@@ -13,7 +13,3 @@ spec:
             backend:
               serviceName: client-cluster-ip-service
               servicePort: 3000
-          - path: /static/?(.*)
-            backend:
-              serviceName: client-cluster-ip-service
-              servicePort: 3001
