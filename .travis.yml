@@ -9,7 +9,7 @@ script:
   - docker run -e CI=true sandergit180/potto-client-test yarn test -- --coverage
  
 after_success:
-  - docker build -t sandergit180/potto-client -f ./client/Dockerfile.dev ./
+  - docker build -t sandergit180/potto-client -f ./client/Dockerfile.dev ./client
   #- docker build -t sandergit180/potto-back ./potto
 
   # Log in to the docker CLI
