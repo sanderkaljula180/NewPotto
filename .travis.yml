@@ -10,12 +10,11 @@ script:
  
 after_success:
   - docker build -t sandergit180/potto-client -f ./client/Dockerfile.dev ./client
-  #- docker build -t sandergit180/potto-back ./potto
+  - docker build -t sandergit180/potto-back -f ./backend/Dockerfile.dev ./backend
 
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Push it to Docker Hub
   - docker push sandergit180/potto-client
- # - docker push sandergit180/potto-back
- # PUSH TO DOCKERHUB
+  - docker push sandergit180/potto-back
